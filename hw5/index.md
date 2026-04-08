@@ -8,7 +8,7 @@ title: UFO Sightings in Space and Time
 This page shows two visualizations built from the UFO sightings dataset.
 
 [The Data](https://github.com/UIUC-iSchool-DataViz/is445_data/raw/main/ufo-scrubbed-geocoded-time-standardized-00.csv)  
-[The Analysis](https://github.com/MTong-Z/MTong-Z.github.io/hw5/hw5.ipynb)
+[The Analysis](https://github.com/MTong-Z/MTong-Z.github.io/blob/master/hw5/hw5.ipynb)
 
 ## Visualization 1: UFO Sightings Map
 
