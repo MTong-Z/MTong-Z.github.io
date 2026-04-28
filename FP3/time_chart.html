@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 13}, "title": {"anchor": "middle", "fontSize": 18}}, "data": {"name": "data-fe0fbfc0c878da55b1282f40f8c642df"}, "mark": {"type": "line", "color": "#2C7FB8", "point": true, "strokeWidth": 3}, "encoding": {"tooltip": [{"field": "fiscal_year", "title": "Year", "type": "ordinal"}, {"field": "amount", "format": "$,.2f", "title": "Total Spending", "type": "quantitative"}], "x": {"axis": {"labelAngle": 0}, "field": "fiscal_year", "title": "Fiscal Year", "type": "ordinal"}, "y": {"axis": {"format": "$,.2s"}, "field": "amount", "title": "Total Expenditures ($)", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_3", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "City of Urbana Total Expenditures by Fiscal Year", "width": 720, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-fe0fbfc0c878da55b1282f40f8c642df": [{"fiscal_year": 2013, "amount": 53932069.1}, {"fiscal_year": 2014, "amount": 70292560.45}, {"fiscal_year": 2015, "amount": 66017683.56}, {"fiscal_year": 2016, "amount": 51929272.45}, {"fiscal_year": 2017, "amount": 59112618.27}, {"fiscal_year": 2018, "amount": 40353710.58}, {"fiscal_year": 2019, "amount": 26710796.58}, {"fiscal_year": 2020, "amount": 33475773.17}, {"fiscal_year": 2021, "amount": 39815748.21}, {"fiscal_year": 2022, "amount": 33153189.35}, {"fiscal_year": 2023, "amount": 40286452.49}, {"fiscal_year": 2024, "amount": 48024468.79}, {"fiscal_year": 2025, "amount": 65920347.13}, {"fiscal_year": 2026, "amount": 25390924.64}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
