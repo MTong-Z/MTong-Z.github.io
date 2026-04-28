@@ -1,14 +1,14 @@
 ---
-
 layout: default
 title: Where Does Urbana Spend Its Money?
------------------------------------------
+---
 
 # Where Does Urbana Spend Its Money?
 
 This page explores how the City of Urbana spends its public funds using official expenditure data. While city budgets affect everyday life, most people do not have a clear understanding of where the money actually goes. This article presents several visualizations to help the public better understand spending patterns, changes over time, and where the money ultimately ends up.
 
 [The Data](https://data.illinois.gov/Local-Government/City-Of-Urbana-Open-Expenditures-Payment-Details/p34w-i7rn/about_data)
+
 [The Analysis](https://github.com/MTong-Z/MTong-Z.github.io/blob/main/FP3/Workbook.ipynb)
 
 ## Visualization 1: Spending by Department
