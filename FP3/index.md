@@ -2,7 +2,8 @@
 layout: default
 title: Where Does Urbana Spend Its Money?
 ---
-## Group Member: Miantong Zhang, Mianchen Zhang
+
+### Group Member: Miantong Zhang, Mianchen Zhang
 
 # Where Does Urbana Spend Its Money?
 
@@ -10,7 +11,7 @@ This page explores how the City of Urbana spends its public funds using official
 
 [The Data](https://data.illinois.gov/Local-Government/City-Of-Urbana-Open-Expenditures-Payment-Details/p34w-i7rn/about_data)
 
-[The Analysis](https://github.com/MTong-Z/MTong-Z.github.io/blob/main/FP3/Workbook.ipynb)
+[The Analysis](https://github.com/MTong-Z/MTong-Z.github.io/blob/master/FP3/Workbook.ipynb)
 
 ## Visualization 1: Spending by Department
 
