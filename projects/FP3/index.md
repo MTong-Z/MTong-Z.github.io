@@ -62,7 +62,7 @@ The indexed chart shows that Community Development spending experienced a sharp 
 
 ## Visualization 5: What Drives Development-Related Spending in Urbana?
 
-<iframe src="what_drives_development_related_spending_dashboard.html" width="1100" height="980" frameborder="0"></iframe>
+<iframe src="what_drives_development_related_spending_dashboard.html" width="1100" height="820" frameborder="0"></iframe>
 
 After comparing development activity and public spending trends over time, this dashboard shifts the analysis from overall patterns to the composition of spending itself. Rather than focusing only on whether spending rises or falls alongside permit activity, the dashboard helps identify where development-related funding is actually going. By filtering by year and department, it becomes possible to examine which spending categories, projects, and vendors account for the largest shares of Community Development and Public Works expenditures.
 
