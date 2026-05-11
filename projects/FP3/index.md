@@ -20,11 +20,11 @@ This project draws on two publicly available datasets from the Illinois open dat
 The primary dataset is the City of Urbana Open Expenditures, which records individual payment transactions made by the city government from July 2012 through December 2025, totaling approximately 174,941 entries. Each record represents a single payment, including the department responsible and the amount spent. For this project, we focus specifically on the Community Development and Public Works departments, as their spending most directly relates to the city's physical development activity.
 The context dataset is the City of Urbana Community Development Permits Issued, which logs building and development permits approved by the city from January 1999 through April 2026, with approximately 48,551 records. We use annual permit counts as a proxy for real-world development activity, providing a ground-level measure of whether development is actually happening in Urbana, independent of what the city budget says.
 
-[Main Dataset](https://data.illinois.gov/Local-Government/City-Of-Urbana-Open-Expenditures-Payment-Details/p34w-i7rn/about_data)
+[Main Dataset - City Of Urbana: Open Expenditures_Payment Details](https://data.illinois.gov/Local-Government/City-Of-Urbana-Open-Expenditures-Payment-Details/p34w-i7rn/about_data)
 
-[Context Dataset](https://data.illinois.gov/Local-Government/City-of-Urbana-Community-Development-Permits-Issue/dvw9-7wyx/about_data)
+[Context Dataset - City of Urbana: Community Development Permits Issued](https://data.illinois.gov/Local-Government/City-of-Urbana-Community-Development-Permits-Issue/dvw9-7wyx/about_data)
 
-[The Analysis](https://github.com/MTong-Z/MTong-Z.github.io/blob/master/projects/FP3/Workbook.ipynb)
+[The Analysis - Juypter Notebook](https://github.com/MTong-Z/MTong-Z.github.io/blob/master/projects/FP3/Workbook.ipynb)
 
 ## Visualization 1: Overall Spending by Department
 
