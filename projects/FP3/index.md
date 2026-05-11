@@ -28,7 +28,7 @@ The context dataset is the City of Urbana Community Development Permits Issued, 
 
 ## Visualization 1: Overall Spending by Department
 
-<iframe src="overall_spending_by_department.html" width="750" height="450" frameborder="0"></iframe>
+<iframe src="overall_spending_by_department.html" style="width: 100%; max-width: 860px; height: 500px; border: 0; display: block; margin: 0 auto;"></iframe>
 
 This visualization shows the top departments in Urbana based on total spending. Each bar represents a department, and the length of the bar encodes total expenditures. A bar chart is appropriate here because it allows for a clear comparison across categories, making it easy to identify which departments account for the largest shares of city spending.
 
@@ -36,7 +36,7 @@ Public Works and Community Development deserve special attention because they ac
 
 ## Visualization 2: Development-Related Spending Over Time
 
-<iframe src="development_related_spending_over_time.html" width="750" height="450" frameborder="0"></iframe>
+<iframe src="development_related_spending_over_time.html" style="width: 100%; max-width: 860px; height: 500px; border: 0; display: block; margin: 0 auto;"></iframe>
 
 This visualization compares yearly spending in Community Development and Public Works. The x-axis represents fiscal year, and the y-axis represents total expenditures. A line chart is used because it effectively shows how each department’s spending changes over time and makes it easier to compare their trends side by side.
 
@@ -48,13 +48,13 @@ Spending trends alone cannot explain actual development activity. A department m
 
 ## Visualization 3: Community Development Permits Over Time
 
-<iframe src="community_development_permits_over_time.html" width="750" height="450" frameborder="0"></iframe>
+<iframe src="community_development_permits_over_time.html" style="width: 100%; max-width: 860px; height: 500px; border: 0; display: block; margin: 0 auto;"></iframe>
 
 This chart uses the permits dataset to track development activity more directly than spending alone. A line chart is used here because it effectively shows how permit activity changes over time, making it easy to identify long-term trends and year-to-year fluctuations. Permit issuance was higher in the early 2000s, declined through the late 2000s and early 2010s, and then strengthened again after 2021, exceeding 2,000 permits in both 2023 and 2024. That rebound suggests recent development activity has picked up even when expenditure totals are harder to interpret by themselves. The drop in 2026 should be read cautiously because the file appears to have been downloaded on May 10, 2026, so the 2026 count likely reflects only part of the year.
 
 ## Visualization 4: Development Activity and Public Spending Trends
 
-<iframe src="development_activity_and_public_spending_trends.html" width="1000" height="520" frameborder="0"></iframe>
+<iframe src="development_activity_and_public_spending_trends.html" style="width: 100%; max-width: 1040px; height: 580px; border: 0; display: block; margin: 0 auto;"></iframe>
 
 To better compare the two datasets despite their different units, both Community Development spending and permit activity were converted into indexed relative values using 2013 as the baseline year (2013 = 100). This allows the visualization to focus on relative change over time rather than raw dollar amounts or permit counts.
 
