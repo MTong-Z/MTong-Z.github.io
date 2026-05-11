@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 13}, "title": {"anchor": "middle", "fontSize": 18}}, "data": {"name": "data-a36ee24c65c911975815352f9aac6bb3"}, "mark": {"type": "line", "color": "#2A9D8F", "point": true, "strokeWidth": 3}, "encoding": {"tooltip": [{"field": "issue_year", "title": "Year", "type": "ordinal"}, {"field": "permits_issued", "format": ",.0f", "title": "Permits Issued", "type": "quantitative"}], "x": {"axis": {"labelAngle": -45}, "field": "issue_year", "title": "Issue Year", "type": "ordinal"}, "y": {"axis": {"format": ",.0f"}, "field": "permits_issued", "title": "Permits Issued", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_2", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Community Development Permits Issued per Year", "width": 720, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-a36ee24c65c911975815352f9aac6bb3": [{"issue_year": 1999, "permits_issued": 1521}, {"issue_year": 2000, "permits_issued": 1531}, {"issue_year": 2001, "permits_issued": 1607}, {"issue_year": 2002, "permits_issued": 2288}, {"issue_year": 2003, "permits_issued": 2349}, {"issue_year": 2004, "permits_issued": 2558}, {"issue_year": 2005, "permits_issued": 2338}, {"issue_year": 2006, "permits_issued": 2055}, {"issue_year": 2007, "permits_issued": 2030}, {"issue_year": 2008, "permits_issued": 1754}, {"issue_year": 2009, "permits_issued": 1764}, {"issue_year": 2010, "permits_issued": 1479}, {"issue_year": 2011, "permits_issued": 1463}, {"issue_year": 2012, "permits_issued": 1482}, {"issue_year": 2013, "permits_issued": 1360}, {"issue_year": 2014, "permits_issued": 1490}, {"issue_year": 2015, "permits_issued": 1473}, {"issue_year": 2016, "permits_issued": 1526}, {"issue_year": 2017, "permits_issued": 1659}, {"issue_year": 2018, "permits_issued": 1751}, {"issue_year": 2019, "permits_issued": 1767}, {"issue_year": 2020, "permits_issued": 1466}, {"issue_year": 2021, "permits_issued": 1534}, {"issue_year": 2022, "permits_issued": 1821}, {"issue_year": 2023, "permits_issued": 2018}, {"issue_year": 2024, "permits_issued": 2092}, {"issue_year": 2025, "permits_issued": 1939}, {"issue_year": 2026, "permits_issued": 434}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

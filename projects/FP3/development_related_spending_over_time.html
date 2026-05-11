@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 13}, "title": {"anchor": "middle", "fontSize": 18}}, "data": {"name": "data-131887fdfc6c415c1aadc498f4d98d90"}, "mark": {"type": "line", "point": true, "strokeWidth": 3}, "encoding": {"color": {"field": "department", "scale": {"domain": ["PUBLIC WORKS", "COMMUNITY DEVELOPMENT"], "range": ["#D95F02", "#1B9E77"]}, "title": "Department", "type": "nominal"}, "tooltip": [{"field": "fiscal_year", "title": "Year", "type": "ordinal"}, {"field": "department", "title": "Department", "type": "nominal"}, {"field": "amount", "format": "$,.2f", "title": "Total Spending", "type": "quantitative"}], "x": {"axis": {"labelAngle": -45}, "field": "fiscal_year", "title": "Fiscal Year", "type": "ordinal"}, "y": {"axis": {"format": "$,.2s"}, "field": "amount", "title": "Total Expenditures ($)", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_1", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales"}], "title": "Yearly Spending Trends for Community Development and Public Works", "width": 720, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-131887fdfc6c415c1aadc498f4d98d90": [{"fiscal_year": 2013, "department": "COMMUNITY DEVELOPMENT", "amount": 10300661.60999999}, {"fiscal_year": 2013, "department": "PUBLIC WORKS", "amount": 16616273.560000045}, {"fiscal_year": 2014, "department": "COMMUNITY DEVELOPMENT", "amount": 24735855.039999966}, {"fiscal_year": 2014, "department": "PUBLIC WORKS", "amount": 18955191.309999965}, {"fiscal_year": 2015, "department": "COMMUNITY DEVELOPMENT", "amount": 20304467.70000016}, {"fiscal_year": 2015, "department": "PUBLIC WORKS", "amount": 19874291.119999845}, {"fiscal_year": 2016, "department": "COMMUNITY DEVELOPMENT", "amount": 7342489.899999996}, {"fiscal_year": 2016, "department": "PUBLIC WORKS", "amount": 18822291.660000034}, {"fiscal_year": 2017, "department": "COMMUNITY DEVELOPMENT", "amount": 8224274.82000001}, {"fiscal_year": 2017, "department": "PUBLIC WORKS", "amount": 16443222.58000002}, {"fiscal_year": 2018, "department": "COMMUNITY DEVELOPMENT", "amount": 5068832.070000006}, {"fiscal_year": 2018, "department": "PUBLIC WORKS", "amount": 14374395.130000047}, {"fiscal_year": 2019, "department": "COMMUNITY DEVELOPMENT", "amount": 3480441.479999997}, {"fiscal_year": 2019, "department": "PUBLIC WORKS", "amount": 5547469.439999997}, {"fiscal_year": 2020, "department": "COMMUNITY DEVELOPMENT", "amount": 3339847.229999997}, {"fiscal_year": 2020, "department": "PUBLIC WORKS", "amount": 5902706.680000024}, {"fiscal_year": 2021, "department": "COMMUNITY DEVELOPMENT", "amount": 3860823.9599999967}, {"fiscal_year": 2021, "department": "PUBLIC WORKS", "amount": 9913867.059999984}, {"fiscal_year": 2022, "department": "COMMUNITY DEVELOPMENT", "amount": 3363951.9299999992}, {"fiscal_year": 2022, "department": "PUBLIC WORKS", "amount": 6799150.6399999885}, {"fiscal_year": 2023, "department": "COMMUNITY DEVELOPMENT", "amount": 3028136.6599999983}, {"fiscal_year": 2023, "department": "PUBLIC WORKS", "amount": 12492002.830000056}, {"fiscal_year": 2024, "department": "COMMUNITY DEVELOPMENT", "amount": 5625355.989999999}, {"fiscal_year": 2024, "department": "PUBLIC WORKS", "amount": 12553515.900000019}, {"fiscal_year": 2025, "department": "COMMUNITY DEVELOPMENT", "amount": 11217372.930000002}, {"fiscal_year": 2025, "department": "PUBLIC WORKS", "amount": 22373413.930000044}, {"fiscal_year": 2026, "department": "COMMUNITY DEVELOPMENT", "amount": 2714047.68}, {"fiscal_year": 2026, "department": "PUBLIC WORKS", "amount": 8623735.220000029}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

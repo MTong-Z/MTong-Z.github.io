@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 13}, "legend": {"labelFontSize": 12, "titleFontSize": 12}, "title": {"anchor": "middle", "fontSize": 18}}, "layer": [{"data": {"name": "data-bbf3d67cee2eadcb45fafa32d24f741c"}, "mark": {"type": "rule", "color": "#8A8A8A", "strokeDash": [5, 4]}, "encoding": {"y": {"field": "Baseline", "type": "quantitative"}}, "name": "view_1"}, {"data": {"name": "data-71b924a25a33ffbc3f089e4996d2cf35"}, "mark": {"type": "line", "point": true, "strokeWidth": 3}, "encoding": {"color": {"field": "Metric", "legend": {"labelFontSize": 12, "labelLimit": 320, "orient": "top-right", "symbolSize": 160, "title": null}, "scale": {"domain": ["Community Development Spending", "Permits Issued"], "range": ["#1F77B4", "#D55E00"]}, "title": null, "type": "nominal"}, "tooltip": [{"field": "Year", "title": "Year", "type": "ordinal"}, {"field": "Metric", "title": "Metric", "type": "nominal"}, {"field": "RawValueLabel", "title": "Raw Value", "type": "nominal"}, {"field": "IndexValue", "format": ".1f", "title": "Indexed Value", "type": "quantitative"}], "x": {"axis": {"labelAngle": -45}, "field": "Year", "sort": "ascending", "title": "Year", "type": "ordinal"}, "y": {"axis": {"format": ".0f", "gridColor": "#E6E6E6", "gridOpacity": 0.8}, "field": "IndexValue", "title": "Indexed Relative Change (2013 = 100)", "type": "quantitative"}}}, {"data": {"name": "data-71b924a25a33ffbc3f089e4996d2cf35"}, "mark": {"type": "circle", "size": 90}, "encoding": {"color": {"field": "Metric", "legend": {"labelFontSize": 12, "labelLimit": 320, "orient": "top-right", "symbolSize": 160, "title": null}, "scale": {"domain": ["Community Development Spending", "Permits Issued"], "range": ["#1F77B4", "#D55E00"]}, "title": null, "type": "nominal"}, "tooltip": [{"field": "Year", "title": "Year", "type": "ordinal"}, {"field": "Metric", "title": "Metric", "type": "nominal"}, {"field": "RawValueLabel", "title": "Raw Value", "type": "nominal"}, {"field": "IndexValue", "format": ".1f", "title": "Indexed Value", "type": "quantitative"}], "x": {"axis": {"labelAngle": -45}, "field": "Year", "sort": "ascending", "title": "Year", "type": "ordinal"}, "y": {"axis": {"format": ".0f", "gridColor": "#E6E6E6", "gridOpacity": 0.8}, "field": "IndexValue", "title": "Indexed Relative Change (2013 = 100)", "type": "quantitative"}}, "transform": [{"filter": {"param": "param_3", "empty": false}}]}, {"data": {"name": "data-71b924a25a33ffbc3f089e4996d2cf35"}, "mark": {"type": "rule", "color": "#BDBDBD"}, "encoding": {"x": {"field": "Year", "type": "ordinal"}}, "transform": [{"filter": {"param": "param_3", "empty": false}}]}], "height": 450, "params": [{"name": "param_3", "select": {"type": "point", "fields": ["Year"], "nearest": true, "on": "mouseover"}, "views": ["view_1"]}, {"name": "param_4", "select": {"type": "interval", "encodings": ["x", "y"]}, "bind": "scales", "views": ["view_1"]}], "title": "Development Activity and Public Spending Trends in Urbana", "width": 980, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-bbf3d67cee2eadcb45fafa32d24f741c": [{"Baseline": 100}], "data-71b924a25a33ffbc3f089e4996d2cf35": [{"Year": 2013, "RawValue": 10300661.60999999, "Metric": "Community Development Spending", "IndexValue": 100.0, "RawValueLabel": "$10,300,662"}, {"Year": 2014, "RawValue": 24735855.039999966, "Metric": "Community Development Spending", "IndexValue": 240.13850737496455, "RawValueLabel": "$24,735,855"}, {"Year": 2015, "RawValue": 20304467.70000016, "Metric": "Community Development Spending", "IndexValue": 197.11809268919552, "RawValueLabel": "$20,304,468"}, {"Year": 2016, "RawValue": 7342489.899999996, "Metric": "Community Development Spending", "IndexValue": 71.28173099941299, "RawValueLabel": "$7,342,490"}, {"Year": 2017, "RawValue": 8224274.82000001, "Metric": "Community Development Spending", "IndexValue": 79.84219976720523, "RawValueLabel": "$8,224,275"}, {"Year": 2018, "RawValue": 5068832.070000006, "Metric": "Community Development Spending", "IndexValue": 49.20880096749446, "RawValueLabel": "$5,068,832"}, {"Year": 2019, "RawValue": 3480441.479999997, "Metric": "Community Development Spending", "IndexValue": 33.78852360921311, "RawValueLabel": "$3,480,441"}, {"Year": 2020, "RawValue": 3339847.229999997, "Metric": "Community Development Spending", "IndexValue": 32.42361856405066, "RawValueLabel": "$3,339,847"}, {"Year": 2021, "RawValue": 3860823.9599999967, "Metric": "Community Development Spending", "IndexValue": 37.48132019259683, "RawValueLabel": "$3,860,824"}, {"Year": 2022, "RawValue": 3363951.9299999992, "Metric": "Community Development Spending", "IndexValue": 32.65762974617319, "RawValueLabel": "$3,363,952"}, {"Year": 2023, "RawValue": 3028136.6599999983, "Metric": "Community Development Spending", "IndexValue": 29.397496730309552, "RawValueLabel": "$3,028,137"}, {"Year": 2024, "RawValue": 5625355.989999999, "Metric": "Community Development Spending", "IndexValue": 54.611598778653644, "RawValueLabel": "$5,625,356"}, {"Year": 2025, "RawValue": 11217372.930000002, "Metric": "Community Development Spending", "IndexValue": 108.89953825014558, "RawValueLabel": "$11,217,373"}, {"Year": 2013, "RawValue": 1360.0, "Metric": "Permits Issued", "IndexValue": 100.0, "RawValueLabel": "1,360"}, {"Year": 2014, "RawValue": 1490.0, "Metric": "Permits Issued", "IndexValue": 109.55882352941177, "RawValueLabel": "1,490"}, {"Year": 2015, "RawValue": 1473.0, "Metric": "Permits Issued", "IndexValue": 108.30882352941175, "RawValueLabel": "1,473"}, {"Year": 2016, "RawValue": 1526.0, "Metric": "Permits Issued", "IndexValue": 112.20588235294117, "RawValueLabel": "1,526"}, {"Year": 2017, "RawValue": 1659.0, "Metric": "Permits Issued", "IndexValue": 121.98529411764707, "RawValueLabel": "1,659"}, {"Year": 2018, "RawValue": 1751.0, "Metric": "Permits Issued", "IndexValue": 128.75, "RawValueLabel": "1,751"}, {"Year": 2019, "RawValue": 1767.0, "Metric": "Permits Issued", "IndexValue": 129.9264705882353, "RawValueLabel": "1,767"}, {"Year": 2020, "RawValue": 1466.0, "Metric": "Permits Issued", "IndexValue": 107.79411764705881, "RawValueLabel": "1,466"}, {"Year": 2021, "RawValue": 1534.0, "Metric": "Permits Issued", "IndexValue": 112.79411764705883, "RawValueLabel": "1,534"}, {"Year": 2022, "RawValue": 1821.0, "Metric": "Permits Issued", "IndexValue": 133.8970588235294, "RawValueLabel": "1,821"}, {"Year": 2023, "RawValue": 2018.0, "Metric": "Permits Issued", "IndexValue": 148.38235294117646, "RawValueLabel": "2,018"}, {"Year": 2024, "RawValue": 2092.0, "Metric": "Permits Issued", "IndexValue": 153.82352941176472, "RawValueLabel": "2,092"}, {"Year": 2025, "RawValue": 1939.0, "Metric": "Permits Issued", "IndexValue": 142.5735294117647, "RawValueLabel": "1,939"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

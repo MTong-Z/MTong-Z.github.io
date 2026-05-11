@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-2caf79975a431d591eeec790ba6d1f7a"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"test": "datum.department === 'PUBLIC WORKS' || datum.department === 'COMMUNITY DEVELOPMENT'", "value": "#D95F02"}, "value": "#C9C9C9"}, "tooltip": [{"field": "department", "title": "Department", "type": "nominal"}, {"field": "amount", "format": "$,.2f", "title": "Total Spending", "type": "quantitative"}], "x": {"axis": {"format": "$,.2s"}, "field": "amount", "title": "Total Expenditures ($)", "type": "quantitative"}, "y": {"field": "department", "sort": "-x", "title": "Department", "type": "nominal"}}, "height": 400, "title": "Top Departments by Total Spending", "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-2caf79975a431d591eeec790ba6d1f7a": [{"department": "PUBLIC WORKS", "amount": 189291527.06000546}, {"department": "COMMUNITY DEVELOPMENT", "amount": 112606558.99999912}, {"department": "POLICE", "amount": 76557065.25999963}, {"department": "FINANCE", "amount": 42385958.64000045}, {"department": "FIRE AND RESCUE", "amount": 41859997.02999974}, {"department": "GENERAL SERVICES", "amount": 32837577.790000014}, {"department": "EXECUTIVE", "amount": 18940254.620000307}, {"department": "FIRE", "amount": 14585803.780000089}, {"department": "CITY-WIDE ACTIVITIES", "amount": 4549545.889999985}, {"department": "HUMAN RESOURCES & FINANCE DEPT", "amount": 3159812.6300000097}, {"department": "CITY CLERK", "amount": 1303903.119999999}, {"department": "CITY COUNCIL", "amount": 281697.9899999998}, {"department": "FIRE PENSION", "amount": 52235.060000000005}, {"department": "POLICE PENSION", "amount": 31726.239999999998}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
